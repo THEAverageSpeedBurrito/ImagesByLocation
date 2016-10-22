@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Pin that shit</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js" ></script>
+
+        <!--Materialize links-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+
+    </head>
+    <body>
+        <div id="map"></div>
+        <main class="full-width">
+            <div class="row" id="textfield">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <textarea id="textarea1" class="materialize-textarea" value=""></textarea>
+                            <label for="textarea1">New pin name</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="row">
+                <div class="col s12 m6">
+                    <div class="card blue-grey darken-1">
+                        <div class="card-content white-text">
+                            <span class="card-title">Card Title</span>
+                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <div class="card blue-grey darken-1">
+                        <div class="card-content white-text">
+                            <span class="card-title">Coordinates</span>
+                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <script type="text/javascript" src="map.js"></script>
+        <script type="text/javascript" src="dynamics.js"></script>
+        <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCan3_Yb2dQv0YL2hpqXOgwIiMs4UwZYAE&callback=initMap"></script>
+    </body>
+</html>
