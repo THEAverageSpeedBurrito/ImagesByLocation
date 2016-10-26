@@ -1,18 +1,37 @@
 html, body {
-  height: 500px;
+  height: 800px;
   margin: 0;
   padding: 0;
 }
 
 #map {
-  height: 100%;
+  height: 450px;
 }
 
 #textfield {
   display: none;
 }
 
+#images {
+  column-count: 4;
+  column-width: 200px;
+  column-gap: 6px;
+}
+
 .full-width {
   margin: 20px auto;
+  padding: 20px;
   max-width: 960px;
+}
+
+img {
+  padding: 0;
+  height: auto;
+  width: 100%;
+  border-radius: 3px;
+  transition: .2s;
+}
+
+img:hover {
+  opacity: .8;
 }
