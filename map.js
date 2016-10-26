@@ -35,9 +35,9 @@ function getImages (lat, lng) {
           src = "http://farm"+ item.farm +".static.flickr.com/"+ item.server +"/"+ item.id +"_"+ item.secret +"_m.jpg";
           $("<img/>").attr({
             "src": src,
-            "class": "col s6 m4 l2",
+            "class": "col s6 m4 l2 result",
           }).appendTo("#images");
-          if ( i === 10 ){
+          if ( i === 30 ){
             return false;
           }
       });

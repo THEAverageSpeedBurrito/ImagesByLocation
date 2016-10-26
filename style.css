@@ -18,13 +18,23 @@ html, body {
   column-gap: 6px;
 }
 
+#expanded {
+  position: fixed;
+  z-index: 10;
+  top: 25%;
+  height: auto;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
 .full-width {
   margin: 20px auto;
   padding: 20px;
   max-width: 960px;
 }
 
-img {
+.result {
   padding: 0;
   height: auto;
   width: 100%;
@@ -32,6 +42,12 @@ img {
   transition: .2s;
 }
 
-img:hover {
+.result:hover {
   opacity: .8;
+}
+
+.big_preview {
+  width: 40%;
+  height: auto;
+  margin: 10px 0 5px 30%;
 }
