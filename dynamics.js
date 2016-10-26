@@ -15,10 +15,11 @@ $('#images').on('click', function(event) {
       'class': 'big_preview col s8 offset-s2',
     }).appendTo('#expanded');
 
-    $('#expanded').show(500);
+    $('#expanded').fadeIn(800);
+    Materialize.toast('Click again to close', 3000);
   }
 
   $('#expanded').on('click', function () {
-    $(this).hide(500).empty();
+    $(this).fadeOut(800).empty();
   });
 });
