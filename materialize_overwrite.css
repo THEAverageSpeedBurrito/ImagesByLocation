@@ -1,0 +1,9 @@
+.nav-wrapper {
+  padding-left: 10px;
+}
+
+.full-width {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 960px;
+}

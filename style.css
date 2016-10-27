@@ -29,22 +29,17 @@ html, body {
   text-align: center;
 }
 
-.full-width {
-  margin: 20px auto;
-  padding: 20px;
-  max-width: 960px;
-}
-
 .result {
   padding: 0;
   height: auto;
   width: 100%;
+  border: 5px solid white;
   border-radius: 3px;
-  transition: .2s;
+  transition: .5s;
 }
 
 .result:hover {
-  opacity: .8;
+  border: 5px solid #3478d8;
 }
 
 .big_preview {
@@ -53,5 +48,33 @@ html, body {
   height: 90%;
   border: 10px solid white;
   box-sizing: border-box;
-  box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 25px 2px rgba(0, 0, 0, 0.7);
+}
+
+/*action bar*/
+#action_bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 75px;
+  width: 100%;
+  padding: 7px;
+  margin: 0;
+  background-color: ghostwhite;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
+}
+
+.action_preview {
+  height: 65px;
+  width: auto;
+}
+
+.material-icons {
+  color: gray;
+  transition: .5s;
+}
+
+.material-icons:hover {
+  color: #3478d8;
 }

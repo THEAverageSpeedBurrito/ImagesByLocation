@@ -5,7 +5,10 @@
         <meta charset="utf-8">
         <title>Pin that shit</title>
         <link rel="stylesheet" href="style.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js" ></script>
+        <link rel="stylesheet" href="materialize_overwrite.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
         <!--Materialize links-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
@@ -14,10 +17,22 @@
     </head>
     <body>
 
-       <div id="expanded"></div>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">FlickrFinder</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="sass.html">Sass</a></li>
+                    <li><a href="badges.html">Components</a></li>
+                    <li><a href="collapsible.html">JavaScript</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="expanded"></div>
 
         <div id="map"></div>
         <main class="full-width">
+
             <div class="row" id="textfield">
                 <form class="col s12">
                     <div class="row">
@@ -28,7 +43,18 @@
                     </div>
                 </form>
             </div>
-            <div id="images" class="col S12"></div>
+            <div id="images"></div>
+
+            <div id="action_bar" class="row">
+              <div class="col s2 offset-s3 icon-gray">
+              </div>
+              <div class="col s2">
+                <i class="medium material-icons">library_add</i>
+              </div>
+              <div class="col s2">
+                <i class="medium material-icons">label_outline</i>
+              </div>
+            </div>
         </main>
 
         <script type="text/javascript" src="map.js"></script>
