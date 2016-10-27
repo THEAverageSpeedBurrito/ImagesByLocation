@@ -37,6 +37,7 @@ function getImages (lat, lng) {
           $("<img/>").attr({
             "src": src,
             "class": "col s6 m4 l2 result",
+            "id": item.id,
           }).appendTo('#images');
 
       });
