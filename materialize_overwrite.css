@@ -7,3 +7,12 @@
   padding: 20px;
   max-width: 960px;
 }
+
+.material-icons {
+  color: gray;
+  transition: .5s;
+}
+
+.material-icons:hover {
+  color: lightskyblue;
+}

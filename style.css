@@ -4,6 +4,10 @@ html, body {
   padding: 0;
 }
 
+img {
+  vertical-align: bottom;
+}
+
 #map {
   height: 450px;
 }
@@ -15,7 +19,7 @@ html, body {
 #images {
   column-count: 4;
   column-width: 200px;
-  column-gap: 6px;
+  column-gap: 5px;
 }
 
 #expanded {
@@ -30,7 +34,7 @@ html, body {
 }
 
 .result {
-  padding: 0;
+  margin: 5px 0 5px 0;
   height: auto;
   width: 100%;
   border: 5px solid white;
@@ -39,7 +43,7 @@ html, body {
 }
 
 .result:hover {
-  border: 5px solid #3478d8;
+  border: 5px solid lightskyblue;
 }
 
 .big_preview {
@@ -50,7 +54,7 @@ html, body {
   box-shadow: 0 0 25px 2px rgba(0, 0, 0, 0.7);
 }
 
-/*action bar*/
+/*Action Bar Styles*/
 #action_bar {
   display: none;
   position: fixed;
@@ -69,11 +73,26 @@ html, body {
   width: auto;
 }
 
-.material-icons {
-  color: gray;
-  transition: .5s;
+/*Collection Styles*/
+
+#collection_outer {
+  display: none;
+  height: 120px;
+  width: 100%;
+  background-color: lightgray;
+  padding: 10px 0 10px 0;
+  overflow: scroll;
 }
 
-.material-icons:hover {
-  color: #3478d8;
+#collection_inner {
+  width: 0px;
+}
+
+.collected_img {
+  height: 100px;
+  width: auto;
+  margin: 0 5px 0 5px;
+  box-sizing: border-box;
+  border: 5px solid white;
+  display: inline;
 }
