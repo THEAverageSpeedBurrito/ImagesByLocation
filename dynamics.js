@@ -1,6 +1,7 @@
 'use strict';
 
 var src;
+var selected;
 
 $('#images').on('click', function(event) {
 
@@ -12,14 +13,20 @@ $('#images').on('click', function(event) {
             $(this).slideUp(500);
         });
 
-        //change image size
+        //change image size (medium to big)
         src = event.target.src.replace('m.jpg', 'b.jpg');
 
+        //show active image
+        selected = event.target;
+        selected.style.border = '5px solid red';
     }
 });
 
 //expand icon funcitonality
 $('#expand').on('click', function() {
+
+  selected.removeAttribute('style');
+
   $('#expanded').empty(); //empty expanded preview
 
   $("<img/>").attr({
@@ -37,9 +44,16 @@ $('#expand').on('click', function() {
 });
 
 //Add to collection functionality
+var collection = []; //collection storage
+
 $('#collect').on('click', function () {
+
+  selected.removeAttribute('style');
   Materialize.toast("Added to collection", 2000);
+
+  collection.push(src);
 });
+
 
 //Add tag functionality
 $('#tag').on('click', function() {
