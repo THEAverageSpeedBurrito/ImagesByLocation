@@ -19,7 +19,7 @@ img {
 #images {
   column-count: 4;
   column-width: 200px;
-  column-gap: 5px;
+  column-gap: 10px;
 }
 
 #expanded {
@@ -38,12 +38,12 @@ img {
   height: auto;
   width: 100%;
   border: 5px solid white;
-  border-radius: 3px;
   transition: .5s;
 }
 
 .result:hover {
-  border: 5px solid lightskyblue;
+  /*border: 5px solid lightskyblue;*/
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
 
 .big_preview {
@@ -77,11 +77,13 @@ img {
 
 #collection_outer {
   display: none;
-  height: 120px;
+  height: 130px;
   width: 100%;
   background-color: lightgray;
   padding: 10px 0 10px 0;
   overflow: scroll;
+  border-top: 5px solid tomato;
+  border-bottom: 5px solid tomato;
 }
 
 #collection_inner {
@@ -95,4 +97,9 @@ img {
   box-sizing: border-box;
   border: 5px solid white;
   display: inline;
+  transition: .5s;
+}
+
+.collected_img:hover {
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
 }

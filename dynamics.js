@@ -1,6 +1,6 @@
 'use strict';
 
-var src;
+var src, id;
 var selected;
 
 $('#images').on('click', function(event) {
@@ -15,12 +15,13 @@ $('#images').on('click', function(event) {
         });
 
         src = event.target.src;
+        id = event.target.id;
 
         //show active image
         selected = event.target;
         selected.style.border = '5px solid tomato';
     }
-    
+
 });
 
 //expand icon funcitonality
@@ -48,7 +49,6 @@ $('#expand').on('click', function() {
 });
 
 //Add to collection functionality
-
 $('#collect').on('click', function () {
 
   selected.removeAttribute('style');
@@ -65,8 +65,24 @@ $('#collect').on('click', function () {
   var newImageWidth = newImage.width() + 20;
 
   $('#collection_inner').width($('#collection_inner').width() + newImageWidth);
-  console.log($('#collection_inner').width());
+
 });
+
+//removes images from collection
+$('#collection_inner').on('click', function(event){
+  var toRemove = $(event.target);
+
+  if(toRemove.id !== 'collection_inner'){
+    var subtractWidth = toRemove.width();
+    $('#collection_inner').width($('#collection_inner').width() - subtractWidth - 20);
+
+    $(toRemove).remove();
+    if($('#collection_inner').width() === 0){
+      $('#collection_outer').slideUp(500);
+    }
+  }
+});
+
 
 
 //Add tag functionality
