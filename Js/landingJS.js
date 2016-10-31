@@ -8,5 +8,5 @@ $(function () {
       borderRadius: '0'
   }, 1000);
 
-  $('h5, #getStarted').delay(1800).slideDown(800);
+  $('#getStarted').delay(1800).slideDown(800);
 });
