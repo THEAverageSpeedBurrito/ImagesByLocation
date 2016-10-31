@@ -75,10 +75,12 @@ $('#collection_inner').on('click', function(event){
 
   if(toRemove.id !== 'collection_inner'){
     var subtractWidth = toRemove.width();
+
     $('#collection_inner').width($('#collection_inner').width() - subtractWidth - 20);
 
     $(toRemove).remove();
     if($('#collection_inner').width() === 0){
+
       $('#collection_outer').slideUp(500);
       $('#collection_action').hide(500);
     }
@@ -94,8 +96,10 @@ $('#tag').on('click', function() {
   //get input, seperate words, chips?
 });
 
-$(window).scroll(function(e){
+//let coordinates bar stick to top
+$(window).scroll(function(){
   var $el = $('#location_data');
+
   var isPositionFixed = ($el.css('position') === 'fixed');
   if ($(this).scrollTop() > 450 && !isPositionFixed){
     $('#location_data').css({'position': 'fixed', 'top': '0px'});

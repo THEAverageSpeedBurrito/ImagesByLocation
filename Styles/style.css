@@ -39,6 +39,8 @@ p {
 }
 
 #location_data {
+  padding-top: 15px;
+  display: none;
   height: 50px;
   width: 100%;
   z-index: 10;
@@ -56,7 +58,6 @@ p {
 }
 
 .result:hover {
-  /*border: 5px solid lightskyblue;*/
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
 
@@ -66,6 +67,14 @@ p {
   border: 10px solid white;
   box-sizing: border-box;
   box-shadow: 0 0 25px 2px rgba(0, 0, 0, 0.7);
+}
+
+/*Landing Page*/
+.landing_full {
+  width: 100%;
+  height: 700px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /*Action Bar Styles*/

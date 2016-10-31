@@ -45,5 +45,10 @@ function getImages (lat, lng) {
 }
 
 function populateLocationData () {
-  $('<p>').text('Lat: ' + lat.toFixed(3)).appendTo('#location_data');
+  if($('#location_data').css('display') === 'none'){
+    $('#location_data').slideDown(500);
+  }
+  $('#lat, #lng').empty();
+  $('<p>').text('Latitude: ' + lat.toFixed(3)).appendTo('#lat');
+  $('<p>').text('Longitude: ' + lng.toFixed(3)).appendTo('#lng');
 }

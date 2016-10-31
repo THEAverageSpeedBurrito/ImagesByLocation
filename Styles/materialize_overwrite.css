@@ -16,3 +16,7 @@
 .material-icons:hover {
   color: lightskyblue;
 }
+
+.row {
+   margin: 0 !important;
+}
