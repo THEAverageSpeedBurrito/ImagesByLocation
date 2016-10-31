@@ -32,7 +32,7 @@ function getImages (lat, lng) {
   $.getJSON(url + "&format=json&jsoncallback=?", function(data){
       $('#images').empty();
       $.each(data.photos.photo, function(i,item){
-          src = "http://farm"+ item.farm +".static.flickr.com/"+ item.server +"/"+ item.id +"_"+ item.secret +"_m.jpg";
+          src = "http://farm"+ item.farm +".static.flickr.com/"+ item.server +"/"+ item.id +"_"+ item.secret +"_b.jpg";
 
           $("<img/>").attr({
             "src": src,
