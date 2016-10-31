@@ -55,6 +55,7 @@ $('#collect').on('click', function () {
   Materialize.toast("Added to collection", 2000);
 
   $('#collection_outer').slideDown(500);
+  $('#collection_action').fadeIn(500);
 
   var newImage = $('<img>').attr({
     'src': src,
@@ -79,6 +80,7 @@ $('#collection_inner').on('click', function(event){
     $(toRemove).remove();
     if($('#collection_inner').width() === 0){
       $('#collection_outer').slideUp(500);
+      $('#collection_action').hide(500);
     }
   }
 });
@@ -90,4 +92,17 @@ $('#tag').on('click', function() {
   Materialize.toast("Add Tag", 2000);
   //expand text box
   //get input, seperate words, chips?
+});
+
+$(window).scroll(function(e){
+  var $el = $('#location_data');
+  var isPositionFixed = ($el.css('position') === 'fixed');
+  if ($(this).scrollTop() > 450 && !isPositionFixed){
+    $('#location_data').css({'position': 'fixed', 'top': '0px'});
+    $('body').css({'padding-top': '50px'});
+  }
+  if ($(this).scrollTop() < 450 && isPositionFixed){
+    $('#location_data').css({'position': 'static', 'top': '0px'});
+    $('body').css({'padding-top': '0'});
+  }
 });

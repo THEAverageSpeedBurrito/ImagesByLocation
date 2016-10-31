@@ -1,6 +1,6 @@
 'use strict';
 
-var map;
+var map, lat, lng;
 
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
@@ -15,11 +15,11 @@ function initMap() {
     map.addListener('click', function (event) {
 
       var coords = event.latLng;
-      var lat = coords.lat();
-      var lng = coords.lng();
+      lat = coords.lat();
+      lng = coords.lng();
 
       getImages(lat, lng);
-
+      populateLocationData();
     });
 
 }
@@ -42,4 +42,8 @@ function getImages (lat, lng) {
 
       });
   });
+}
+
+function populateLocationData () {
+  $('<p>').text('Lat: ' + lat.toFixed(3)).appendTo('#location_data');
 }

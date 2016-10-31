@@ -8,6 +8,11 @@ img {
   vertical-align: bottom;
 }
 
+p {
+  margin: 0;
+  color: white;
+}
+
 #map {
   height: 450px;
 }
@@ -31,6 +36,15 @@ img {
   background-color: rgba(0, 0, 0, 0.7);
   display: none;
   text-align: center;
+}
+
+#location_data {
+  height: 50px;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 0 10 0 black;
+  background-color: lightslategray;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
 }
 
 .result {
@@ -77,17 +91,25 @@ img {
 
 #collection_outer {
   display: none;
-  height: 130px;
   width: 100%;
-  background-color: lightgray;
-  padding: 10px 0 10px 0;
+  background-color: lightcoral;
+  padding: 10px 0 0 0;
   overflow: scroll;
-  border-top: 5px solid tomato;
-  border-bottom: 5px solid tomato;
 }
 
 #collection_inner {
   width: 0px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+#collection_action {
+  display: none;
+  height: 50px  ;
+  width: 100%;
+  background-color: tomato;
+  text-align: center;
+  padding: 6px 0 10px 0;
 }
 
 .collected_img {
