@@ -143,6 +143,7 @@ save.on('click', function () {
     createCollection(name);
 
   }else{
+    $('#button').attr({'class': 'col s2 offset-s2'});
     $('#collection_name').show(500);
   }
 });
@@ -158,6 +159,6 @@ function createCollection (name) {
     links[iD] = source;
   });
 
-  collections[name] = links
-  console.log(collections);
+  collections[name] = links;
+  localStorage.setItem('data', JSON.stringify(collections));
 }
