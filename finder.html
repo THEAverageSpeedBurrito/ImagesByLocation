@@ -16,46 +16,47 @@
 
     </head>
     <body>
-      <div id="expanded"></div>
+        <div id="expanded"></div>
 
         <div id="map"></div>
 
         <div id="location_data" class="row">
-          <div id="lat" class="col s2 offset-s4"></div>
-          <div id="lng" class="col s2"></div>
+            <div id="lat" class="col s2 offset-s4"></div>
+            <div id="lng" class="col s2"></div>
         </div>
         <div id="collection_outer">
-          <div id="collection_inner"></div>
+            <div id="collection_inner"></div>
         </div>
-        <div id="collection_action">
-          <a class="waves-effect waves-light btn indigo accent-1">Save Collection</a>
+        <div id="collection_action" class="row">
+          <div class="col s2 offset-s2">
+            <a id="save" class="waves-effect waves-light btn indigo accent-1">Save Collection</a>
+          </div>
+            <div class="input-field col s6" id="collection_name">
+                <input placeholder="New Collection Name" type="text">
+            </div>
         </div>
 
         <main class="full-width">
             <div id="images"></div>
 
             <div id="action_bar" class="row">
-              <div class="col s2 offset-s2">
-                <i class="medium material-icons" id="expand">zoom_out_map</i>
-              </div>
-              <div class="col s2">
-                <i class="medium material-icons" id="collect">add_circle_outline</i>
-              </div>
-              <div class="col s2">
-                <i class="medium material-icons" id="tag">label_outline</i>
-              </div>
-              <div class="col s2">
-                <i class="medium material-icons" id="download">file_download</i>
-              </div>
+                <div class="col s2 offset-s2">
+                    <i class="medium material-icons" id="expand">zoom_out_map</i>
+                </div>
+                <div class="col s2">
+                    <i class="medium material-icons" id="collect">add_circle_outline</i>
+                </div>
+                <div class="col s2">
+                    <i class="medium material-icons" id="tag">label_outline</i>
+                </div>
+                <div class="col s2">
+                    <i class="medium material-icons" id="download">file_download</i>
+                </div>
             </div>
         </main>
 
         <script type="text/javascript" src="Js/map.js"></script>
         <script type="text/javascript" src="Js/dynamics.js"></script>
         <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCan3_Yb2dQv0YL2hpqXOgwIiMs4UwZYAE&callback=initMap"></script>
-        <div class="input-field col s6">
-          <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-          <label for="first_name">First Name</label>
-        </div>
     </body>
 </html>

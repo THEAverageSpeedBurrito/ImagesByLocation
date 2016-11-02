@@ -135,4 +135,9 @@ $(window).scroll(function() {
 });
 
 
+var save = $('#save')
+save.on('click', function () {
+  $('#collection_name').slideDown(500);
+});
+
 //Auxilliary functions
