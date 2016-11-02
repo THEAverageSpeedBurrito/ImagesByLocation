@@ -10,6 +10,7 @@ $(function() {
 $('#images').on('click', function(event) {
 
     if (event.target.id !== 'images') {
+        // $('#images').children().removeAttribute('style');
 
         $('#action_bar').slideDown(500); //Shows Action Bar
 
@@ -23,6 +24,11 @@ $('#images').on('click', function(event) {
 
         //show active image
         selected = event.target;
+
+        $('#images').children().attr({
+          'style': 'border: 5px solid white',
+        });
+
         selected.style.border = '5px solid tomato';
     }
 
@@ -54,22 +60,25 @@ $('#expand').on('click', function() {
 
 //Add to collection functionality
 $('#collect').on('click', function() {
+    var inner = $('#collection_inner');
+    var outer = $('#collection_outer');
 
     selected.removeAttribute('style');
     Materialize.toast("Added to collection", 2000);
 
-    $('#collection_outer').slideDown(500);
+    outer.slideDown(500);
     $('#collection_action').fadeIn(500);
 
     var newImage = $('<img>').attr({
         'src': src,
+        'id': id,
         'class': 'collected_img',
     });
 
-    newImage.prependTo('#collection_inner');
+    newImage.prependTo(inner);
     var newImageWidth = newImage.width() + 20;
 
-    $('#collection_inner').width($('#collection_inner').width() + newImageWidth);
+    $(inner).width($(inner).width() + newImageWidth);
 
 });
 
@@ -124,3 +133,6 @@ $(window).scroll(function() {
         });
     }
 });
+
+
+//Auxilliary functions
