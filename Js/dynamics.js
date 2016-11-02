@@ -2,6 +2,7 @@
 
 var src, id;
 var selected;
+var collections = {};
 
 $(function() {
     Materialize.toast('Click a location to bring up images', 2000);
@@ -137,7 +138,26 @@ $(window).scroll(function() {
 
 var save = $('#save')
 save.on('click', function () {
-  $('#collection_name').slideDown(500);
+  if($('#collection_input').is(':visible')){
+    var name = $('#collection_input').val();
+    createCollection(name);
+
+  }else{
+    $('#collection_name').show(500);
+  }
 });
 
 //Auxilliary functions
+
+function createCollection (name) {
+  var links = {};
+  $('#collection_inner > img').map(function(){
+    var iD = $(this).attr('id');
+    var source = $(this).attr('src');
+
+    links[iD] = source;
+  });
+
+  collections[name] = links
+  console.log(collections);
+}
