@@ -2,7 +2,7 @@
 
 var src, id;
 var selected;
-var collections = {};
+var collections = JSON.parse(localStorage.getItem('data'));
 
 $(function() {
     Materialize.toast('Click a location to bring up images', 3000);

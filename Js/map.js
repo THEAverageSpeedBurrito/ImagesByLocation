@@ -1,6 +1,7 @@
 'use strict';
 
 var map, lat, lng;
+var imageCount = 0;
 
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
@@ -15,7 +16,17 @@ function initMap() {
     map.addListener('click', function(event) {
         $('#map').animate({
             height: '300px'
-        }, 500);
+        }, 500, function () {
+          initMap();
+          map.setCenter(event.latLng);
+
+          var marker = new google.maps.Marker({
+            position: coords,
+            map: map,
+            title: 'Hello World!'
+          });
+
+        });
 
         var coords = event.latLng;
         lat = coords.lat();
@@ -24,11 +35,6 @@ function initMap() {
         getImages(lat, lng);
         populateLocationData();
 
-        var marker = new google.maps.Marker({
-            position: coords,
-            map: map,
-            title: 'Hello World!'
-        });
     });
 
 }
@@ -40,17 +46,22 @@ function getImages(lat, lng) {
 
     $.getJSON(url + "&format=json&jsoncallback=?", function(data) {
         $('#images').empty();
+        imageCount = 0;
+
         $.each(data.photos.photo, function(i, item) {
             src = "http://farm" + item.farm + ".static.flickr.com/" + item.server + "/" + item.id + "_" + item.secret + "_m.jpg";
 
             $("<img/>").attr({
                 "src": src,
-                "class": "col s6 m4 l2 result",
+                "class": "result",
                 "id": item.id,
             }).on('load', function() {
                 $(this).appendTo('#images');
             });
+            imageCount++;
         });
+        $('#count').empty();
+        $('<p>').text('Images: ' + imageCount).appendTo('#count');
     });
 }
 
