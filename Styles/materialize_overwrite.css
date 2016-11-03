@@ -1,6 +1,3 @@
-.nav-wrapper {
-  padding-left: 10px;
-}
 
 .full-width {
   margin: 20px auto;
@@ -31,6 +28,7 @@
 }
 
 .nav-wrapper {
+  padding-left: 10px;
   background-color: lightcoral;
   border-bottom: 10px solid tomato;
 }

@@ -6,7 +6,7 @@ var collections = JSON.parse(localStorage.getItem('data'));
 
 $(function() {
     Materialize.toast('Click a location to bring up images', 3000);
-})
+});
 
 $('#images').on('click', function(event) {
 
@@ -47,6 +47,8 @@ $('#expand').on('click', function() {
     //remove red border
     selected.removeAttribute('style');
 
+    $('nav').hide();
+
     $('#expanded').empty(); //empty expanded preview
 
     $("<img/>").attr({
@@ -59,6 +61,7 @@ $('#expand').on('click', function() {
 
     $('#expanded').click(function() { //handles closing expanded preview
         $(this).fadeOut(500);
+        $('nav').show();
     });
 
 });

@@ -1,20 +1,23 @@
 'use strict';
+
+var navText = '<div class="nav-wrapper"><a href="finder.html" class="brand-logo"></a><ul class="right"><li><a href=""><i class="material-icons" id="xyz">not_interested</i></a></li></ul></div>';
+
 $(function () {
   renderCollections();
 
+  $('i').on('click', function (event) {
+    console.log(event.target.id);
 
-  // $('.collection_header').on('click', function (event) {
-  //
-  //   var collectionName = event.target.textContent;
-  //   $(event.target).hide(500);
-  //
-  //   var tempData = JSON.parse(localStorage.getItem('data'));
-  //   delete tempData[collectionName];
-  //
-  //   localStorage.setItem('data', JSON.stringify(tempData));
-  //
-  //   renderCollections();
-  // });
+    var collectionName = event.target.id;
+
+    var tempData = JSON.parse(localStorage.getItem('data'));
+    delete tempData[collectionName];
+
+    localStorage.setItem('data', JSON.stringify(tempData));
+
+    $('#collection_body').empty();
+    renderCollections();
+  });
 });
 
 
@@ -27,14 +30,16 @@ function renderCollections () {
     var bodyId = collection + '_body';
 
     $('<div>').attr({
-      'class': 'collection_header z-depth-2',
+      'class': 'collection_header z-depth-1',
       'id': headerId,
     }).appendTo(container);
 
     $('<div>').attr({
-      'class': 'collection_body z-depth-2',
+      'class': 'collection_body z-depth-1',
       'id': bodyId,
     }).appendTo(container);
+
+    $('<nav>').append(navText.replace('xyz', collection)).appendTo(container);
 
     var toBody = document.getElementById(bodyId);
     var toHead = document.getElementById(headerId);
