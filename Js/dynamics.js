@@ -31,6 +31,11 @@ $('#images').on('click', function(event) {
         });
 
         selected.style.border = '5px solid tomato';
+
+        $('#download').attr({
+          'href': src.replace('_m.jpg', '_b.jpg'),
+          'download': src.replace('_m.jpg', '_b.jpg'),
+        });
     }
 
 });
@@ -81,6 +86,7 @@ $('#collect').on('click', function() {
     $(inner).width($(inner).width() + newImageWidth);
 
 });
+
 
 //removes images from collection
 $('#collection_inner').on('click', function(event) {
