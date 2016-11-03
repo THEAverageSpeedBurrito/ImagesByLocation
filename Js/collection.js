@@ -1,7 +1,22 @@
 'use strict';
 $(function () {
   renderCollections();
+
+
+  // $('.collection_header').on('click', function (event) {
+  //
+  //   var collectionName = event.target.textContent;
+  //   $(event.target).hide(500);
+  //
+  //   var tempData = JSON.parse(localStorage.getItem('data'));
+  //   delete tempData[collectionName];
+  //
+  //   localStorage.setItem('data', JSON.stringify(tempData));
+  //
+  //   renderCollections();
+  // });
 });
+
 
 function renderCollections () {
   var data = JSON.parse(localStorage.getItem('data'));
@@ -12,12 +27,12 @@ function renderCollections () {
     var bodyId = collection + '_body';
 
     $('<div>').attr({
-      'class': 'collection_header',
+      'class': 'collection_header z-depth-2',
       'id': headerId,
     }).appendTo(container);
 
     $('<div>').attr({
-      'class': 'collection_body',
+      'class': 'collection_body z-depth-2',
       'id': bodyId,
     }).appendTo(container);
 

@@ -10,13 +10,15 @@
   text-align: center;
   padding-top: 1px;
   color: white;
-  margin: 20px 0 10px 0;
+  margin: 20px 0 0 0;
+  border-bottom: 10px solid tomato;
+  box-sizing: content-box;
 }
 
 .collection_body {
   width: 100%;
   height: auto;
-  background-color: lightcoral;
+  background-color: ghostwhite;
   padding-right: 10px;
   column-count: 3;
   column-width: 200px;
@@ -35,4 +37,10 @@
 
 .collected_img_page:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/*Icon Styles*/
+
+#deleteCollection {
+  display: inline;
 }

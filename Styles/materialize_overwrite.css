@@ -7,12 +7,12 @@
   padding: 0 20px 20px 20px;
 }
 
-.material-icons {
+.action {
   color: gray;
   transition: .5s;
 }
 
-.material-icons:hover {
+.action:hover {
   color: tomato;
 }
 
@@ -28,4 +28,9 @@
 .input-field input[type=text]:focus {
     border-bottom: 1px solid white !important;
     box-shadow: 0 1px 0 0 white !important;
+}
+
+.nav-wrapper {
+  background-color: lightcoral;
+  border-bottom: 10px solid tomato;
 }

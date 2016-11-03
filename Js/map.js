@@ -60,7 +60,6 @@ function getImages(lat, lng) {
             });
             imageCount++;
         });
-        $('#count').empty();
         $('<p>').text('Images: ' + imageCount).appendTo('#count');
     });
 }
@@ -69,7 +68,7 @@ function populateLocationData() {
     if ($('#location_data').css('display') === 'none') {
         $('#location_data').slideDown(500);
     }
-    $('#lat, #lng').empty();
+    $('#lat, #lng, #count').empty();
     $('<p>').text('Latitude: ' + lat.toFixed(3)).appendTo('#lat');
     $('<p>').text('Longitude: ' + lng.toFixed(3)).appendTo('#lng');
 }

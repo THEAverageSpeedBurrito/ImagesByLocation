@@ -14,6 +14,21 @@ p {
   color: white;
 }
 
+h1 {
+  display: inline-block;
+  font-size: 70px !important;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  color: white;
+  margin: 0 !important;
+}
+
+h5 {
+  font-size: 25px !important;
+  font-weight: 300 !important;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  color: white;
+}
+
 #map {
   height: 100%;
 }
@@ -112,6 +127,7 @@ p {
   background-color: tomato;
   text-align: center;
   padding: 6px 0 10px 0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
 }
 
 .collected_img {

@@ -112,7 +112,7 @@ $('#tag').on('click', function() {
 //let coordinates bar stick to top
 $(window).scroll(function() {
     var $el = $('#location_data');
-    var height = $('#map').height();
+    var height = $('#map').height() + $('.nav-wrapper').height() + 10;
 
     var isPositionFixed = ($el.css('position') === 'fixed');
     if ($(this).scrollTop() > height && !isPositionFixed) {

@@ -15,7 +15,27 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
 
     </head>
-    <body>
+    <body style="background: url(Assets/handmadepaper.png)">
+
+        <nav>
+            <div class="nav-wrapper">
+                <a href="finder.html" class="brand-logo">
+                    <i class="material-icons">search</i>Flickr Finder</a>
+                <ul class="right hide-on-med-and-down">
+                    <li>
+                        <a href="finder.html">
+                            <i class="material-icons">my_location</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="collection.html">
+                            <i class="material-icons">view_module</i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
         <div id="expanded"></div>
 
         <div id="map"></div>
@@ -29,9 +49,9 @@
             <div id="collection_inner"></div>
         </div>
         <div id="collection_action" class="row">
-          <div class="col s2 offset-s5" id="button">
-            <a id="save" class="waves-effect waves-light btn indigo accent-1">Save</a>
-          </div>
+            <div class="col s2 offset-s5" id="button">
+                <a id="save" class="waves-effect waves-light btn indigo accent-1">Save</a>
+            </div>
             <div class="input-field col s6" id="collection_name">
                 <input id="collection_input" placeholder="New Collection Name" type="text">
             </div>
@@ -42,16 +62,16 @@
 
             <div id="action_bar" class="row">
                 <div class="col s2 offset-s2">
-                    <i class="medium material-icons" id="expand">zoom_out_map</i>
+                    <i class="medium material-icons action" id="expand">zoom_out_map</i>
                 </div>
                 <div class="col s2">
-                    <i class="medium material-icons" id="collect">add_circle_outline</i>
+                    <i class="medium material-icons action" id="collect">add_circle_outline</i>
                 </div>
                 <div class="col s2">
-                    <i class="medium material-icons" id="tag">label_outline</i>
+                    <i class="medium material-icons action" id="tag">label_outline</i>
                 </div>
                 <div class="col s2">
-                    <i class="medium material-icons" id="download">file_download</i>
+                    <i class="medium material-icons action" id="download">file_download</i>
                 </div>
             </div>
         </main>
