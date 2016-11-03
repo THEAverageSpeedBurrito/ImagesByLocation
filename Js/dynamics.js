@@ -5,7 +5,7 @@ var selected;
 var collections = {};
 
 $(function() {
-    Materialize.toast('Click a location to bring up images', 2000);
+    Materialize.toast('Click a location to bring up images', 3000);
 })
 
 $('#images').on('click', function(event) {
@@ -37,7 +37,6 @@ $('#images').on('click', function(event) {
 
 //expand icon funcitonality
 $('#expand').on('click', function() {
-
     //change image size (medium to big)
     src = src.replace('m.jpg', 'b.jpg');
     //remove red border
@@ -113,9 +112,10 @@ $('#tag').on('click', function() {
 //let coordinates bar stick to top
 $(window).scroll(function() {
     var $el = $('#location_data');
+    var height = $('#map').height();
 
     var isPositionFixed = ($el.css('position') === 'fixed');
-    if ($(this).scrollTop() > 450 && !isPositionFixed) {
+    if ($(this).scrollTop() > height && !isPositionFixed) {
         $('#location_data').css({
             'position': 'fixed',
             'top': '0px'
@@ -124,7 +124,7 @@ $(window).scroll(function() {
             'padding-top': '50px'
         });
     }
-    if ($(this).scrollTop() < 450 && isPositionFixed) {
+    if ($(this).scrollTop() < height && isPositionFixed) {
         $('#location_data').css({
             'position': 'static',
             'top': '0px'
@@ -138,7 +138,7 @@ $(window).scroll(function() {
 
 var save = $('#save')
 save.on('click', function () {
-  if($('#collection_input').is(':visible')){
+  if($('#collection_input').is(':visible') && $('#collection_input').val() !== ''){
     var name = $('#collection_input').val();
     createCollection(name);
 
