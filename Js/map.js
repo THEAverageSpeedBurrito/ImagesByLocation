@@ -38,8 +38,9 @@ function getImages (lat, lng) {
             "src": src,
             "class": "col s6 m4 l2 result",
             "id": item.id,
-          }).appendTo('#images');
-
+          }).on('load', function () {
+            $(this).appendTo('#images');
+          });
       });
   });
 }

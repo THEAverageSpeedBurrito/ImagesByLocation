@@ -5,7 +5,7 @@ $(function () {
 
 function renderCollections () {
   var data = JSON.parse(localStorage.getItem('data'));
-  var container = $('#collection');
+  var container = $('#collection_body');
 
   for(var collection in data){
     var headerId = collection + '_header';
@@ -30,7 +30,6 @@ function renderCollections () {
       $('<img>').attr({
         'class': 'collected_img_page',
         'src': data[collection][images],
-        'style': 'margin: 10px 5px 0 10px',
       }).appendTo(toBody);
     }
   }
