@@ -151,6 +151,11 @@ save.on('click', function () {
     var name = $('#collection_input').val();
     createCollection(name);
 
+    $('#collection_inner').empty().width(0);
+    $('#collection_outer').slideUp(500);
+    $('#collection_action').hide(500);
+    $('#collection_name').val('');
+
   }else{
     $('#button').attr({'class': 'col s2 offset-s2'});
     $('#collection_name').show(500);
